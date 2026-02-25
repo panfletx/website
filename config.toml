@@ -1,41 +1,13 @@
 title = "Alan Mendoza Sosa"
 baseURL = "https://panfletx.github.io/"
-theme = "researcher"
 disableKinds = ["taxonomy", "term"]
 enableEmoji = false
-math = false
 
 [params]
   author = "Alan Mendoza Sosa"
   description = "PhD Candidate in Spanish and Portuguese, Yale University."
-  favicon = ""
-  logo = ""
-
-  [params.footer]
-    text = "Alan Mendoza Sosa"
-    url = ""
-
-  [params.style]
-    fontFamily = "Inconsolata"
-    fontSize = "14pt"
-    pageWidth = "750px"
-    avatarSize = "110px"
-    colorBlack = "#222222"
-    colorRed = "#dc3545"
-
-  [[params.socialIcons]]
-    icon = "fas fa-envelope"
-    title = "Email"
-    url = "mailto:alan.mendozasosa@yale.edu"
-
-  # Uncomment and add your Scholar URL when ready:
-  # [[params.socialIcons]]
-  #   icon = "ai ai-google-scholar"
-  #   title = "Google Scholar"
-  #   url = "https://scholar.google.com/citations?user=YOURID"
-
-[permalinks]
-  "/" = "/:filename"
+  avatar = "/headshot.jpg"
+  email = "alan.mendozasosa@yale.edu"
 
 [menu]
   [[menu.main]]

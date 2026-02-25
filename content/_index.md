@@ -2,8 +2,6 @@
 title = "About"
 +++
 
-{{< figure class="avatar" src="/headshot.jpg" alt="Alan Mendoza Sosa" >}}
-
 I am a PhD candidate in the Department of Spanish and Portuguese at Yale University,
 where I expect to complete my degree in 2027. My research focuses on queer and
 decolonial aesthetics in contemporary Latin American and Latinx literature, with

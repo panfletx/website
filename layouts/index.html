@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="container home">
+  <div class="home-photo">
+    {{ with .Site.Params.avatar }}
+    <img src="{{ . }}" alt="{{ $.Site.Params.author }}">
+    {{ end }}
+  </div>
+  <div class="home-bio">
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}
