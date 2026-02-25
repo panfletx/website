@@ -1,5 +1,5 @@
 title = "Alan Mendoza Sosa"
-baseURL = "https://alanmendozasosa.github.io/"
+baseURL = "https://panfletx.github.io/"
 theme = "researcher"
 disableKinds = ["taxonomy", "term"]
 enableEmoji = false
