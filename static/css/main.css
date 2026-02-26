@@ -65,6 +65,51 @@ body {
   padding: 3.5rem 3rem 4rem;
 }
 
+/* Right nav column — fixed, right 25% */
+.sidenav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 3.5rem 2.5rem 0;
+  gap: 0.6rem;
+}
+
+.sidenav a {
+  position: relative;
+  color: #efefef;
+  text-decoration: none;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.sidenav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #111;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.sidenav a:hover {
+  color: #111;
+}
+
+.sidenav a:hover::after {
+  transform: scaleX(1);
+}
+
 /* ── CV Typography ───────────────────────────────── */
 
 .cv section {
@@ -180,12 +225,36 @@ body {
     max-height: 420px;
   }
 
+  .caption {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
   .right {
+    order: 2;
     margin-left: 0;
     width: 100%;
     height: auto;
     overflow-y: visible;
     padding: 2rem 1.5rem 3rem;
+  }
+
+  .sidenav {
+    order: 3;
+    position: static;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5rem 2.5rem;
+    gap: 2rem;
+  }
+
+  .sidenav a {
+    color: #bbb;
   }
 
   .entry-header {
