@@ -25,7 +25,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 25%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -63,7 +63,7 @@ body {
 
 /* Right panel — only this side scrolls */
 .right {
-  margin-left: 50%;
+  margin-left: 25%;
   width: 50%;
   height: 100vh;
   overflow-y: auto;
