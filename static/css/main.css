@@ -57,6 +57,11 @@ body {
   line-height: 1.4;
 }
 
+/* Mobile caption is hidden on desktop */
+.caption-mobile {
+  display: none;
+}
+
 /* Right panel — page scrolls, left panel stays fixed */
 .right {
   margin-left: 25%;
@@ -223,6 +228,16 @@ body {
   top: 0.1em;
 }
 
+/* ── Hamburger (hidden on desktop) ───────────────── */
+
+.nav-toggle {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
 /* ── Mobile ──────────────────────────────────────── */
 
 @media (max-width: 768px) {
@@ -240,6 +255,7 @@ body {
     position: static;
     width: 100%;
     height: auto;
+    order: 0;
   }
 
   .left img {
@@ -248,11 +264,88 @@ body {
     object-position: top;
   }
 
-  .caption {
+  .caption-desktop {
+    display: none;
+  }
+
+  .caption-mobile {
+    display: block;
+    order: 1;
+    flex: none;
     position: sticky;
     top: 0;
     z-index: 10;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Caption top row: name/position on left, hamburger on right */
+  .caption-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* Hamburger button */
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 22px;
+    height: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #111;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  /* Hamburger → X when open */
+  body.nav-open .nav-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  body.nav-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  body.nav-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Mobile nav dropdown (inside sticky caption bar) */
+  .mobile-nav {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.85rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid #ccc;
+  }
+
+  body.nav-open .mobile-nav {
+    display: flex;
+  }
+
+  .mobile-nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .mobile-nav a.active {
+    color: #111;
+    font-weight: 600;
   }
 
   .right {
@@ -264,20 +357,9 @@ body {
     padding: 2rem 1.5rem 3rem;
   }
 
+  /* Desktop sidenav hidden on mobile (nav is now in the sticky bar) */
   .sidenav {
-    order: 3;
-    position: static;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1.5rem 2.5rem;
-    gap: 2rem;
-  }
-
-  .sidenav a {
-    color: #333;
+    display: none;
   }
 
   .entry-header {

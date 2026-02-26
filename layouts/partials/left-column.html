@@ -1,9 +1,31 @@
 <div class="left">
   <img src="{{ "headshot.jpg" | relURL }}" alt="{{ .Site.Title }}">
-  <div class="caption">
+  <div class="caption caption-desktop">
     {{ with .Site.Home }}
     <p class="name">{{ .Params.name }}</p>
     <p class="position">{{ .Params.position }}</p>
     {{ end }}
   </div>
+</div>
+<div class="caption caption-mobile">
+  <div class="caption-top">
+    <div>
+      {{ with .Site.Home }}
+      <p class="name">{{ .Params.name }}</p>
+      <p class="position">{{ .Params.position }}</p>
+      {{ end }}
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav">
+    <a href="{{ "/" | relURL }}"{{ if .IsHome }} class="active"{{ end }} onclick="document.body.classList.remove('nav-open')">About</a>
+    <a href="{{ "research/" | relURL }}"{{ if eq .File.ContentBaseName "research" }} class="active"{{ end }} onclick="document.body.classList.remove('nav-open')">Research</a>
+    <a href="{{ "teaching/" | relURL }}"{{ if eq .File.ContentBaseName "teaching" }} class="active"{{ end }} onclick="document.body.classList.remove('nav-open')">Teaching</a>
+    <a href="{{ "creative-writing/" | relURL }}"{{ if eq .File.ContentBaseName "creative-writing" }} class="active"{{ end }} onclick="document.body.classList.remove('nav-open')">Creative Writing</a>
+    <a href="{{ "cv/" | relURL }}"{{ if eq .Section "cv" }} class="active"{{ end }} onclick="document.body.classList.remove('nav-open')">CV</a>
+  </nav>
 </div>
