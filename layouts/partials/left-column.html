@@ -1,0 +1,9 @@
+<div class="left">
+  <img src="{{ "headshot.jpg" | relURL }}" alt="{{ .Site.Title }}">
+  <div class="caption">
+    {{ with .Site.Home }}
+    <p class="name">{{ .Params.name }}</p>
+    <p class="position">{{ .Params.position }}</p>
+    {{ end }}
+  </div>
+</div>

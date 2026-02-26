@@ -12,19 +12,9 @@
 <body>
   <div class="wrapper">
 
-    <div class="left">
-      <img src="{{ "headshot.jpg" | relURL }}" alt="{{ .Params.name }}">
-      <div class="caption">
-        <p class="name">{{ .Params.name }}</p>
-        <p class="position">{{ .Params.position }}</p>
-      </div>
-    </div>
+    {{ partial "left-column.html" . }}
 
-    <nav class="sidenav">
-      <a href="#">Research</a>
-      <a href="#">Teaching</a>
-      <a href="#">Creative Writing</a>
-    </nav>
+    {{ partial "sidenav.html" . }}
 
     <div class="right">
       <div class="cv">

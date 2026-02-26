@@ -81,7 +81,7 @@ body {
 
 .sidenav a {
   position: relative;
-  color: #efefef;
+  color: #444;
   text-decoration: none;
   font-size: 0.82rem;
   letter-spacing: 0.1em;
@@ -108,6 +108,24 @@ body {
 
 .sidenav a:hover::after {
   transform: scaleX(1);
+}
+
+/* Active nav link */
+.sidenav a.active {
+  color: #111;
+  font-size: calc(0.82rem + 5px);
+}
+
+.sidenav a.active::after {
+  transform: scaleX(1);
+}
+
+/* Page body (single pages) */
+.page-body p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #222;
+  margin-bottom: 1.25rem;
 }
 
 /* ── CV Typography ───────────────────────────────── */
@@ -254,7 +272,7 @@ body {
   }
 
   .sidenav a {
-    color: #bbb;
+    color: #444;
   }
 
   .entry-header {
