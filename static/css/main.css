@@ -9,15 +9,13 @@ body {
   font-size: 23px;
   background: #fff;
   color: #111;
-  overflow: hidden;
 }
 
 /* ── Layout ─────────────────────────────────────── */
 
 .wrapper {
   display: flex;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
 }
 
 /* Left panel — fixed, never scrolls */
@@ -59,12 +57,10 @@ body {
   line-height: 1.4;
 }
 
-/* Right panel — only this side scrolls */
+/* Right panel — page scrolls, left panel stays fixed */
 .right {
   margin-left: 25%;
   width: 50%;
-  height: 100vh;
-  overflow-y: auto;
   background: #fff;
   padding: 3.5rem 3rem 4rem;
 }
