@@ -22,7 +22,7 @@
     </button>
   </div>
   <nav class="mobile-nav">
-    <a href="{{ "/" | relURL }}"{{ if .IsHome }} class="active"{{ end }} onclick="document.body.classList.remove('nav-open')">About</a>
+    <a href="{{ .Site.Home.RelPermalink }}"{{ if .IsHome }} class="active"{{ end }} onclick="document.body.classList.remove('nav-open')">About</a>
     <a href="{{ "research/" | relURL }}"{{ if eq .File.ContentBaseName "research" }} class="active"{{ end }} onclick="document.body.classList.remove('nav-open')">Research</a>
     <a href="{{ "teaching/" | relURL }}"{{ if eq .File.ContentBaseName "teaching" }} class="active"{{ end }} onclick="document.body.classList.remove('nav-open')">Teaching</a>
     <a href="{{ "creative-writing/" | relURL }}"{{ if eq .File.ContentBaseName "creative-writing" }} class="active"{{ end }} onclick="document.body.classList.remove('nav-open')">Creative Writing</a>
