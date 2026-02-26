@@ -17,8 +17,11 @@
     {{ partial "sidenav.html" . }}
 
     <div class="right">
-      <div class="page-body">
-        {{ .Content }}
+      <div class="cv">
+        <h2>{{ .Title }}</h2>
+        <div class="page-body">
+          {{ .Content }}
+        </div>
       </div>
     </div>
 
